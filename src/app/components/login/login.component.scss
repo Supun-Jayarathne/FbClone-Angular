@@ -1,0 +1,128 @@
+@import "../../shared/styles.scss";
+
+.login-container {
+    background-color: #F8F2F5;
+    // height: 100vh;
+    // width: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_header {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    &_left {
+        width: 500px;
+        padding-right: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        img {
+            height: 56px;
+            margin-right: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 32px;
+            width: 500px;
+        }
+    }      // left ends here
+
+    &_right {
+        &_card {
+            height: 388px;
+            width: 400px;
+            padding: 18px;
+            border-radius: 18px;
+            margin-bottom: 38px;
+
+            &_content {
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+
+                .login-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px;
+
+                    input {
+                        padding: 20px;
+                        outline: none;
+                        border: 1px solid lightgray;
+                        border-radius: 5px;
+
+                        &::placeholder {
+                            font-size: 16px;
+                            font-weight: normal;
+                        }
+                    }
+
+                    .login-button {
+                        background-color: $primary-button-color;
+                        padding: 15px;
+                        outline: none;
+                        border: none;
+                        border-radius: 7px;
+                        color: white;
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-bottom: 28px;
+                        cursor: pointer;
+                    }
+                } // login form end
+                
+                a {
+                    text-decoration: none;
+                    color: $primary-button-color;
+                    text-align: center;
+                    border-bottom: 1px solid lightgray;
+                    margin-bottom: 20px;
+                    padding-bottom: 28px;
+                    cursor: pointer;
+                }
+
+                .create-account {
+                   background-color: $success-button-color;
+                   display: inline-block; 
+                   align-self: center;
+                   outline: none;
+                   border: none;
+                   border-radius: 7px;
+                   padding: 15px 38px;
+                   color: white;
+                   font-size: 18px;
+                   font-weight: bold;
+                   cursor: pointer;
+                }
+            }
+
+        } // card ends here
+
+        .tagLine {
+            text-align: center;
+            letter-spacing: 0.7px;
+        }
+
+    }
+}
+
+.login_footer {
+    height: 30vh;
+    align-self: flex-end;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
